@@ -1,0 +1,22 @@
+{
+  "name": "db",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf .turbo node_modules",
+    "db:generate": "yarn prisma generate",
+    "db:push": "yarn prisma db push --skip-generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.8.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^6.0.0",
+    "prisma": "^4.8.0",
+    "typescript": "^4.9.4"
+  }
+}
