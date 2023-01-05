@@ -11,6 +11,7 @@
     "dev": "turbo run dev --parallel",
     "dev:web": "turbo run dev --filter=!admin",
     "dev:admin": "turbo run dev --filter=!web",
+    "app:install": "yarn install --frozen-lockfile --ignore-scripts",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
