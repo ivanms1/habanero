@@ -38,7 +38,7 @@ This repository uses [Node.js](https://nodejs.org/en/) as a runtime environment.
 
 ## Running the app
 
-- Install all dependencies, on the root folder run
+- To install project deps, run
 
   ```
   yarn app:install
