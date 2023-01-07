@@ -1,5 +1,3 @@
-import { Button } from 'ui';
-
 import { trpc } from '@/utils/trpc';
 
 export default function Web() {
@@ -10,7 +8,6 @@ export default function Web() {
       {jobPostsQuery?.data?.map((jobPost) => (
         <div key={jobPost.id}>{jobPost.role}</div>
       ))}
-      <Button />
     </div>
   );
 }
