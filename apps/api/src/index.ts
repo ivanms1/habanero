@@ -9,11 +9,11 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
-const whiteList = ['http://localhost:3000', 'http://localhost:3001'];
+const WHITELIST = ['http://localhost:3000', 'http://localhost:3001'];
 
 const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
-    if (origin && whiteList.indexOf(origin) !== -1) {
+    if (origin && WHITELIST.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
