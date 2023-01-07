@@ -39,6 +39,8 @@
     "DISCORD_CLIENT_ID",
     "DISCORD_CLIENT_SECRET",
     "NEXT_PUBLIC_SERVER_URL",
-    "PORT"
+    "PORT",
+    "WEB_URL",
+    "ADMIN_URL"
   ]
 }
