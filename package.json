@@ -11,7 +11,10 @@
     "dev": "turbo run dev --parallel",
     "dev:web": "turbo run dev --filter=!admin",
     "dev:admin": "turbo run dev --filter=!web",
+    "dev:api": "turbo run dev --filter=api",
     "app:install": "yarn install --frozen-lockfile --ignore-scripts",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push db:generate",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
