@@ -75,3 +75,8 @@ This repository uses [Node.js](https://nodejs.org/en/) as a runtime environment.
     ```
     yarn dev:admin
     ```
+
+  - Start backed + admin + web
+    ```
+    yarn dev
+    ```
