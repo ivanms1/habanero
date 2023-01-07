@@ -1,15 +1,20 @@
 import express from 'express';
 import cors from 'cors';
 import type { CorsOptions } from 'cors';
+import * as dotenv from 'dotenv';
 import * as trpcExpress from '@trpc/server/adapters/express';
-
 import { appRouter, createContext } from 'trpc';
+
+dotenv.config();
 
 const app = express();
 
 const PORT = process.env.PORT || 4000;
 
-const WHITELIST = ['http://localhost:3000', 'http://localhost:3001'];
+const WHITELIST = [
+  process.env.WEB_URL as string,
+  process.env.ADMIN_URL as string,
+];
 
 const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
