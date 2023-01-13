@@ -16,6 +16,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: 'Primary',
   disabled: false,
+  isLoading: false,
 };
 
 export const Secondary = Template.bind({});
@@ -23,6 +24,7 @@ Secondary.args = {
   children: 'Secondary',
   variant: 'secondary',
   disabled: false,
+  isLoading: false,
 };
 
 export const Ghost = Template.bind({});

@@ -11,7 +11,9 @@ export default function Web() {
         <div key={jobPost.id}>{jobPost.role}</div>
       ))}
 
-      <Button variant='primary'>Boop</Button>
+      <Button variant='primary' className='w-40'>
+        Boop
+      </Button>
     </div>
   );
 }
