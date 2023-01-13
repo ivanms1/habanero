@@ -29,6 +29,9 @@
     "type-check": {
       "dependsOn": ["^db:generate"],
       "cache": false
+    },
+    "storybook": {
+      "cache": false
     }
   },
   "globalEnv": [
