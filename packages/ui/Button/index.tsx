@@ -34,7 +34,7 @@ const BASE_STYLES =
   'py-2 px-4 transition active:translate-y-0.5 disabled:opacity-50';
 
 const VARIANT_STYLES = {
-  primary: 'bg-primary  text-white hover:bg-primary/80 ',
+  primary: 'bg-primary text-white hover:bg-primary/80 ',
   secondary:
     'bg-transparent text-primary border border-secodary hover:bg-primary/10',
 };

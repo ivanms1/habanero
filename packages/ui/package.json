@@ -9,8 +9,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"**/*.ts*\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "concurrently \"yarn dev\" \"yarn start-storybook -p 6006\"",
+    "build-storybook": "concurrently \"yarn build\" \"yarn build-storybook\""
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -27,6 +27,7 @@
     "@types/react-dom": "^18.0.7",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "concurrently": "^7.6.0",
     "esbuild-sass-plugin": "^2.4.5",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
