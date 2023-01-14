@@ -80,3 +80,11 @@ This repository uses [Node.js](https://nodejs.org/en/) as a runtime environment.
     ```
     yarn dev
     ```
+
+## Running storybook
+
+- To run storybook, run
+
+  ```
+  yarn storybook
+  ```

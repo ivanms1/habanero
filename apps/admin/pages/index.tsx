@@ -10,8 +10,8 @@ export default function Admin() {
 
   return (
     <div>
-      <h1>Admin</h1>
-      <Button onClick={handleClick} />
+      <h1 className='text-4xl'>Admin</h1>
+      <Button onClick={handleClick}>beep</Button>
     </div>
   );
 }
