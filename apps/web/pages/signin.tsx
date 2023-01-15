@@ -1,12 +1,12 @@
 import { Button } from 'ui';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/router';
 
 export default function SignIn() {
-  const { query } = useRouter();
-
+  // added a separate function for this
+  // since we might need to specify different
+  // callback urls in the future
   function handleSignIn() {
-    signIn(undefined, { callbackUrl: query.next ? `${query.next}` : '/' });
+    signIn('google');
   }
 
   return (
@@ -22,6 +22,7 @@ export default function SignIn() {
           <Button
             variant='ghost'
             className='flex px-6 py-2 font-semibold select-none border-2 rounded-md text-white bg-slate-800'
+            onClick={handleSignIn}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
