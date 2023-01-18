@@ -10,7 +10,6 @@ export default function Web() {
       {jobPostsQuery?.data?.map((jobPost) => (
         <div key={jobPost.id}>{jobPost.role}</div>
       ))}
-
       <Button variant='primary' className='w-40'>
         Boop
       </Button>

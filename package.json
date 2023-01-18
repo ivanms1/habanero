@@ -20,7 +20,7 @@
     "storybook": "turbo run storybook"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "config": "*",
     "prettier": "latest",
     "turbo": "latest"
   },
