@@ -30,11 +30,10 @@
     "concurrently": "^7.6.0",
     "esbuild-sass-plugin": "^2.4.5",
     "eslint": "^7.32.0",
-    "eslint-config-custom": "*",
     "postcss": "^8.4.21",
     "postcss-preset-env": "^7.8.3",
     "react": "^18.2.0",
-    "tailwind-config": "*",
+    "config": "*",
     "tailwindcss": "^3.2.4",
     "tsconfig": "*",
     "typescript": "^4.5.2"

@@ -13,6 +13,7 @@
     "dev:admin": "turbo run dev --filter=!web",
     "dev:api": "turbo run dev --filter=api",
     "app:install": "yarn install --frozen-lockfile --ignore-scripts",
+    "clean": "rm -rf node_modules && yarn app:install",
     "db:generate": "turbo db:generate",
     "db:push": "turbo db:push db:generate",
     "lint": "turbo run lint",
@@ -20,7 +21,7 @@
     "storybook": "turbo run storybook"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "config": "*",
     "prettier": "latest",
     "turbo": "latest"
   },
