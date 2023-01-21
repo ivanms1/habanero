@@ -13,7 +13,7 @@
 - `packages/ui`: Internal component library used by both `web` and `admin` applications.
 - `packages/trpc`: Libary that exports [tRPC](https://trpc.io/) router and context for the apps in the monorepo to consume.
 - `packages/auth`: Libary that exports [NextAuth.js](https://next-auth.js.org/) configuration for the apps in the monorepo to consume.
-- `packages/eslint-config-custom`: Libary that contains custom [eslint](https://eslint.org/) rules for the monorepo.
+- `packages/config`: Libary that contains custom [eslint](https://eslint.org/) rules and the [tailwindcss](https://tailwindcss.com/) config for the monorepo.
 - `packages/tsconfig`: Libary that contains custom [tsconfig](https://www.typescriptlang.org/tsconfig) rules for the monorepo.
 
 ## Requirements

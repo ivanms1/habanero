@@ -1,17 +1,17 @@
-import { Button } from 'ui';
-import { trpc } from '@/utils/trpc';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import type { GetStaticProps } from 'next';
 
-export default function Admin() {
-  const createJob = trpc.jobPost.create.useMutation();
+import Home from 'src/pages/Home';
 
-  function handleClick() {
-    createJob.mutate({ content: 'test job', role: 'test role' });
-  }
+import { DEFAULT_LOCALE } from 'src/const';
 
-  return (
-    <div>
-      <h1 className='text-4xl'>Admin</h1>
-      <Button onClick={handleClick}>beep</Button>
-    </div>
-  );
-}
+export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const locale = context.locale || DEFAULT_LOCALE;
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'home'])),
+    },
+  };
+};

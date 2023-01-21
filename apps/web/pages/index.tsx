@@ -1,18 +1,17 @@
-import { Button } from 'ui';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import type { GetStaticProps } from 'next';
 
-import { trpc } from '@/utils/trpc';
+import Home from 'src/pages/Home';
 
-export default function Web() {
-  const jobPostsQuery = trpc.jobPost.all.useQuery();
-  return (
-    <div>
-      <h1 className='text-5xl'>Web</h1>
-      {jobPostsQuery?.data?.map((jobPost) => (
-        <div key={jobPost.id}>{jobPost.role}</div>
-      ))}
-      <Button variant='primary' className='w-40'>
-        Boop
-      </Button>
-    </div>
-  );
-}
+import { DEFAULT_LOCALE } from 'src/const';
+
+export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const locale = context.locale || DEFAULT_LOCALE;
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'home'])),
+    },
+  };
+};
