@@ -2,6 +2,7 @@ import 'ui/dist/index.css';
 import { SessionProvider } from 'next-auth/react';
 import type { Session } from 'next-auth';
 import type { AppType } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 
 import { trpc } from '@/utils/trpc';
 
@@ -18,4 +19,4 @@ const MyApp: AppType<{ session: Session | null }> = ({
   );
 };
 
-export default trpc.withTRPC(MyApp);
+export default trpc.withTRPC(appWithTranslation(MyApp));
