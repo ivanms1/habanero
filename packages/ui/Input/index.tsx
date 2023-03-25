@@ -17,12 +17,14 @@ export const Input = ({
 }: InputProps) => {
   return (
     <div className='flex flex-col relative'>
-      <label
-        htmlFor={id || name}
-        className='font-semibold text-neutral-80 mb-1'
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          htmlFor={id || name}
+          className='font-semibold text-neutral-80 mb-1'
+        >
+          {label}
+        </label>
+      )}
       <input
         className={clsx(
           BASE_STYLES,
