@@ -6,8 +6,9 @@ import Layout from 'src/components/Layout';
 
 import { trpc } from '@/utils/trpc';
 
-import './globals.css';
 import { appWithTranslation } from 'next-i18next';
+
+import './globals.css';
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
